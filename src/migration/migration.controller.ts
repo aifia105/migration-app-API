@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { MigrationService } from './migration.service';
-import { CreateMigrationDto } from './dto/create-migration.dto';
-import { UpdateMigrationDto } from './dto/update-migration.dto';
+import { CreateMigrationDto } from './dto/create-mongodb-migration.dto';
+import { UpdateMigrationDto } from './dto/create-postgresql-migration.dto';
 
 @Controller('migration')
 export class MigrationController {

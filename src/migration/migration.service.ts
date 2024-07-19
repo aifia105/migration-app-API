@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateMigrationDto } from './dto/create-migration.dto';
-import { UpdateMigrationDto } from './dto/update-migration.dto';
+import { CreateMigrationDto } from './dto/create-mongodb-migration.dto';
+import { UpdateMigrationDto } from './dto/create-postgresql-migration.dto';
 
 @Injectable()
 export class MigrationService {
