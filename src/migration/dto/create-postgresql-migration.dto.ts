@@ -1,4 +1,24 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateMigrationDto } from './create-mongodb-migration.dto';
+import { IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
 
-export class UpdateMigrationDto extends PartialType(CreateMigrationDto) {}
+
+export class CreatePostgresMigrationDto  {
+    @IsNotEmpty()
+    @IsString()
+    host: string;
+
+    @IsNotEmpty()
+    @IsNumber()
+    port: number;
+
+    @IsNotEmpty()
+    @IsString()
+    database: string;
+
+    @IsOptional()
+    @IsString()
+    username: string;
+
+    @IsOptional()
+    @IsString()
+    password: string;
+}
